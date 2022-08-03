@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="content">
+    <div class="item active" style="
+          background-image: url('https://img2.baidu.com/it/u=835321525,1974857462&fm=253&fmt=auto&app=138&f=JPEG?w=1353&h=80');
+        ">
+      <div class="title">桂林</div>
+    </div>
+    <div class="item" style="
+          background-image: url('https://img1.baidu.com/it/u=1499001738,37769528&fm=253&fmt=auto&app=120&f=JPEG?w=1353&h=80');
+        ">
+      <div class="title">阿尔卑斯</div>
+    </div>
+    <div class="item" style="
+          background-image: url('https://img1.baidu.com/it/u=832307965,1195399587&fm=253&fmt=auto&app=138&f=JPEG?w=1353&h=80');
+        ">
+      <div class="title">小镇</div>
+    </div>
+    <div class="item" style="
+          background-image: url('https://img1.baidu.com/it/u=1396062893,1533219266&fm=253&fmt=auto&app=138&f=JPEG?w=1353&h=80');
+        ">
+      <div class="title">雪景</div>
+    </div>
+    <div class="item" style="
+          background-image: url('https://img2.baidu.com/it/u=1251774134,848811267&fm=253&fmt=auto&app=138&f=JPEG?w=1353&h=80');
+        ">
+      <div class="title">草原</div>
+    </div>
+  </div>
+</body>
+<script>
+  let list = document.querySelectorAll('.item')
+  console.log(list)
+  list.forEach(item => {
+    item.addEventListener('click', function () {
+      removeActive()
+      item.classList.add('active')
+    })
+  })
+  function removeActive() {
+    list.forEach(item => {
+      item.classList.remove('active')
+    })
+  }
+</script>
+
+</html>
